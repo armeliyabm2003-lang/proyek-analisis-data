@@ -13,7 +13,7 @@ def load_data():
     data_path = Path(__file__).parent / "import os
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
-data_path = os.path.join(current_dir, "main_data.csv.gz")"
+data_path = os.path.join(current_dir, "main_data.csv.gz")
     df = pd.read_csv(data_path)
     df["order_purchase_timestamp"] = pd.to_datetime(df["order_purchase_timestamp"])
     return df
